@@ -1,5 +1,7 @@
-export const SPOTIFY_CLIENT_ID = "4cb8863c3be24b40942bcb88fb45d603";
-export const SPOTIFY_REDIRECT_URI = "exp://localhost:19000"; // URI untuk development di Expo
+import Constants from 'expo-constants';
+
+export const SPOTIFY_CLIENT_ID = Constants.expoConfig?.extra?.spotifyClientId;
+export const SPOTIFY_REDIRECT_URI = Constants.expoConfig?.extra?.spotifyRedirectUri;
 export const SPOTIFY_SCOPES = [
   'streaming',
   'user-read-email',

@@ -1,6 +1,7 @@
 import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI, SPOTIFY_SCOPES } from '../config/spotify';
 import { makeRedirectUri, useAuthRequest } from 'expo-auth-session';
 import { encode as base64Encode } from 'base-64';
+import Constants from 'expo-constants';
 
 let spotifyAccessToken = null;
 
@@ -8,7 +9,7 @@ export const getSpotifyAuthToken = async () => {
   if (spotifyAccessToken) return spotifyAccessToken;
 
   const clientId = SPOTIFY_CLIENT_ID;
-  const clientSecret = '5954ecc4e4224c28afb86aa8448287f3'; // Client Secret yang benar
+  const clientSecret = Constants.expoConfig?.extra?.spotifyClientSecret;
 
   const basic = base64Encode(`${clientId}:${clientSecret}`);
   

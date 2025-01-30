@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import Constants from 'expo-constants';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDK_hHX8X0oFqJAUWsUOZBfCZO2JHYkyAg",
-  authDomain: "melodymessages-fb3a4.firebaseapp.com",
-  projectId: "melodymessages-fb3a4",
-  storageBucket: "melodymessages-fb3a4.firebasestorage.app",
-  messagingSenderId: "873160143338",
-  appId: "1:873160143338:web:d291e88227b546acd90293"
+  apiKey: Constants.expoConfig?.extra?.firebaseApiKey,
+  authDomain: Constants.expoConfig?.extra?.firebaseAuthDomain,
+  projectId: Constants.expoConfig?.extra?.firebaseProjectId,
+  storageBucket: Constants.expoConfig?.extra?.firebaseStorageBucket,
+  messagingSenderId: Constants.expoConfig?.extra?.firebaseMessagingSenderId,
+  appId: Constants.expoConfig?.extra?.firebaseAppId
 };
 
 const app = initializeApp(firebaseConfig);
