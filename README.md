@@ -82,7 +82,7 @@ MelodyMessages bertujuan untuk menciptakan cara baru dalam berkomunikasi melalui
 
 1. Clone repositori
 ```bash
-git clone https://github.com/username/MelodyMessages.git
+git clone https://github.com/Wahyusrg0819/MelodyMessages.git
 cd MelodyMessages
 ```
 
